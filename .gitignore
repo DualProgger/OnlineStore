@@ -7,3 +7,11 @@
 /users/migrations/__pycache__
 /OnlineStoreSSH
 /OnlineStoreSSH.pub
+/customers/__pycache__
+/customers/migrations/__pycache__
+/products/__pycache__
+/products/migrations/__pycache__
+/cart/__pycache__
+/cart/migrations/__pycache__
+/orders/__pycache__
+/orders/migrations/__pycache__
