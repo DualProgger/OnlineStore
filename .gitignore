@@ -1,5 +1,6 @@
 /.venv
 .env
+plan.txt
 /.postgres_data
 /.pgadmin_data
 /store/__pycache__
