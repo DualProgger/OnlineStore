@@ -6,4 +6,3 @@ class ListProducts(ListView):
     model = Product
     template_name = 'products/list_products.html'
     context_object_name = 'products'
-
