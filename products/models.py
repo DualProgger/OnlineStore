@@ -14,7 +14,12 @@ class Product(models.Model):
         validators=[MinValueValidator(0)],
         verbose_name='Цена'
     )
-    image_url = models.URLField(blank=True, verbose_name='URL изображения')
+    #image_url = models.URLField(blank=True, verbose_name='URL изображения')
+    image = models.ImageField(
+        upload_to='img/',
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = 'Товар'

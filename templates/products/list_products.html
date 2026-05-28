@@ -1,5 +1,30 @@
 {% extends "index.html" %}
 {% block title %}Products{% endblock %}
 {% block content %}
-<h2>Наши продукты</h2>
+<h1>Наши продукты</h1>
+{% if products %}
+        <div class="products-list">
+            {% for product in products %}
+                <div class="product-item" style="border: 1px solid #ddd; margin: 10px; padding: 15px;">
+                    <h2>{{ product.name }}</h2>
+
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}"
+                             alt="{{ product.name }}"
+                             style="max-width: 200px; height: auto; margin-bottom: 10px;">
+            {% else %}
+                        <p>Изображение отсутствует</p>
+            {% endif %}
+
+            <p><strong>Цена:</strong> {{ product.price }} руб.</p>
+
+            {% if product.description %}
+                <p><strong>Описание:</strong> {{ product.description }}</p>
+            {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>В каталоге пока нет товаров.</p>
+    {% endif %}
 {% endblock %}
